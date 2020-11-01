@@ -5,13 +5,14 @@
 [![Downloads](https://pepy.tech/badge/yolo-labeler/week)](https://pepy.tech/project/yolo-labeler/week)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Note: This tool is using U-2-Net model for background removal. So it is preferred to use single point focused images as input.
+####Note: This tool is using U-2-Net model for background removal. So it is preferred to use single point focused images as input.
 
 YOLO Labeler is a tool to remove images background and label object in YOLO format.
 
 <p style="display: flex;align-items: center;justify-content: center;">
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="250" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.txt" width="250" />
 </p>
 
 <p style="display: flex;align-items: center;justify-content: center;"> 
