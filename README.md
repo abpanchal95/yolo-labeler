@@ -13,7 +13,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="400" />
   <div class="textcontent">
-    <div class="text"><b> 0 0.513942 0.407692 0.272115 0.746795 </b></div>
+    <div class="text"><b> YOLO String: 0 0.513942 0.407692 0.272115 0.746795 </b></div>
   </div>
 </p>
 
@@ -21,7 +21,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2_.png" width="400" />
   <div class="textcontent">
-    <div class="text"><b> 0 0.287500 0.580769 0.575000 0.837821 </b></div>
+    <div class="text"><b> YOLO String: 0 0.287500 0.580769 0.575000 0.837821 </b></div>
   </div>  
 </p>
 
@@ -29,7 +29,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3_.png" width="400" />
   <div class="textcontent">
-    <div class="text"><b> 1 0.546627 0.473380 0.899471 0.834987 </b></div>
+    <div class="text"><b> YOLO String: 1 0.546627 0.473380 0.899471 0.834987 </b></div>
   </div>
 </p>
 
@@ -37,7 +37,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4_.png" width="400" />
   <div class="textcontent">
-    <div class="text"><b> 2 0.312660 0.499840 0.625321 0.999679 </b></div>
+    <div class="text"><b> YOLO String: 2 0.312660 0.499840 0.625321 0.999679 </b></div>
   </div>
 </p>
 
@@ -45,7 +45,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5_.png" width="400" />
   <div class="textcontent">
-    <div class="text"><b> 2 0.484135 0.499840 0.363141 0.999679 </b></div>
+    <div class="text"><b> YOLO String: 2 0.484135 0.499840 0.363141 0.999679 </b></div>
   </div>
 </p>
 
