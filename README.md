@@ -52,7 +52,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
 ### Installation
 
 ```bash
-    pip install yolo-labeler
+pip install yolo-labeler
 ```
 
 ### Usage as a cli
