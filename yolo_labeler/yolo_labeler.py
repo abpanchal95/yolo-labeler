@@ -225,8 +225,7 @@ def get_right(img):
 def main(args, model, image_path):	
 	print(f"Processing {image_path}")
 	img = Image.open(image_path).convert('RGB')
-	if args.size and (args.width or args.height):
-		raise ValueError("Please provide either size flag 1 or width and height")
+
 	if not args.size:
 		img = img.resize((args.width, args.height), resample=Image.LANCZOS)
 	mask = predict(model, np.array(img)).convert("L")
