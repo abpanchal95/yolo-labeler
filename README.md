@@ -9,10 +9,10 @@
 
 YOLO Labeler is a tool to remove images background and label object in YOLO format.
 
-<p style="display: flex;align-items: center;justify-content: center;vertical-align: middle;">
+<p style="display: flex;align-items: center;justify-content: center;">
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="250" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="250" />
-  <span style="">0 0.513942 0.407692 0.272115 0.746795</span>
+  <span style="display: flex;align-items: center;justify-content: center;">0 0.513942 0.407692 0.272115 0.746795</span>
 </p>
 
 <p style="display: flex;align-items: center;justify-content: center;"> 
