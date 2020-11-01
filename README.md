@@ -55,62 +55,28 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
 pip install yolo-labeler
 ```
 
-### Usage as a cli
-
-Remove the background from a remote image
-```bash
-    curl -s http://input.png | rembg > output.png
-```
-
-Remove the background from a local file
-```bash
-    rembg -o path/to/output.png path/to/input.png
-```
-
-Remove the background from all images in a folder
-```bash
-    rembg -p path/to/inputs
-```
-
 ### Usage as a library
 
-In `app.py`
+In `test.py`
 
 ```python
-    import sys
-    from rembg.bg import remove
+import yolo_labeler
 
-    sys.stdout.buffer.write(remove(sys.stdin.buffer.read()))
+yolo_labeler.run(args)
 ```
 
-Then run
-```
-    cat input.png | python app.py > out.png
+run command
+```bash
+python3 test.py --input_path /path/to/image or image_folder --output_text_path /output/text/path
 ```
 
 ### Advance usage
 
 Sometimes it is possible to achieve better results by turning on alpha matting. Example:
 ```bash
-    curl -s http://input.png | rembg -a -ae 15 > output.png
+python3 test.py --input_path /path/to/image or image_folder --output_text_path /output/text/path
 ```
 
-<table>
-    <thead>
-        <tr>
-            <td>Original</td>
-            <td>Without alpha matting</td>
-            <td>With alpha matting (-a -ae 15)</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://raw.githubusercontent.com/danielgatis/rembg/master/examples/food-1.jpg"/></td>
-            <td><img src="https://raw.githubusercontent.com/danielgatis/rembg/master/examples/food-1.out.jpg"/></td>
-            <td><img src="https://raw.githubusercontent.com/danielgatis/rembg/master/examples/food-1.out.alpha.jpg"/></td>
-        </tr>
-    </tbody>
-</table>
 
 ### References
 
@@ -118,6 +84,6 @@ Sometimes it is possible to achieve better results by turning on alpha matting. 
 
 ### License
 
-Copyright (c) 2020-present [Daniel Gatis](https://github.com/danielgatis)
+Copyright (c) 2020-present [Abhi Panchal](https://github.com/abpanchal95)
 
 Licensed under [MIT License](./LICENSE.txt)
