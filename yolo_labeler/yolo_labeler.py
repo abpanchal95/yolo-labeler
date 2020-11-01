@@ -60,7 +60,7 @@ def load_model(model_name: str = "u2net"):
 		net = U2NET(3, 1)
 		path = os.path.expanduser(os.path.join("~", ".u2net", model_name))
 		download(
-			"https://www.dropbox.com/s/kdu5mhose1clds0/u2net.pth?dl=1",
+			"https://www.dropbox.com/s/qetmux2r5hks944/u2net?dl=1",
 			"u2net.pth",
 			path,
 		)
