@@ -40,9 +40,30 @@ def get_arg():
 	parsed_script_args,_ = parser.parse_known_args(script_args)
 
 	return parsed_script_args
+	
+def download(url, fname, path):
+    if os.path.exists(path):
+        return
 
-def load_model(path):
-	net = U2NET(3, 1)
+    resp = requests.get(url, stream=True)
+    total = int(resp.headers.get("content-length", 0))
+    with open(path, "wb") as file, tqdm(
+        desc=fname, total=total, unit="iB", unit_scale=True, unit_divisor=1024,
+    ) as bar:
+        for data in resp.iter_content(chunk_size=1024):
+            size = file.write(data)
+            bar.update(size)
+            
+def load_model(model_name: str = "u2net"):
+	os.makedirs(os.path.expanduser(os.path.join("~", ".u2net")), exist_ok=True)
+	if model_name == "u2net":
+		net = U2NET(3, 1)
+		path = os.path.expanduser(os.path.join("~", ".u2net", model_name))
+		download(
+			"https://www.dropbox.com/s/kdu5mhose1clds0/u2net.pth?dl=1",
+			"u2net.pth",
+			path,
+		)
 	try:
 		if torch.cuda.is_available():
 			net.load_state_dict(torch.load(path))
@@ -247,7 +268,7 @@ def main(args, model, image_path):
 	return yolo_string
 		
 def run(args):
-    model = load_model("./yolo_labeler/model/u2net")
+    model = load_model()
 	
     if os.path.isdir(args.input_path):  
         types = (os.path.join(args.input_path,'*.jpg'), os.path.join(args.input_path,'*.jpeg'), os.path.join(args.input_path,'*.png'))
@@ -261,7 +282,3 @@ def run(args):
 
     for image_path in files_grabbed:
         yolo_string = main(args, model, image_path)
-	
-if __name__=='__main__':
-	args = get_arg()
-	run(args)

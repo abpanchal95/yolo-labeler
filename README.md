@@ -9,7 +9,7 @@
 
 YOLO Labeler is a tool to remove images background and label object in YOLO format.
 
-<p style="display: flex;align-items: center;justify-content: center;">
+<p style="display: flex;align-items: center;justify-content: center; border-style: groove;">
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="400" />
   <div class="textcontent">
@@ -52,7 +52,7 @@ YOLO Labeler is a tool to remove images background and label object in YOLO form
 ### Installation
 
 ```bash
-pip install yolo-labeler
+pip3 install yolo-labeler
 ```
 
 ### Usage as a library
