@@ -5,11 +5,12 @@
 [![Downloads](https://pepy.tech/badge/yolo-labeler/week)](https://pepy.tech/project/yolo-labeler/week)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://img.shields.io/badge/License-MIT-blue.svg)
 
-#### Note: This tool is using U-2-Net model for background removal. So it is preferred to use single point focused images as input.
+#### Note: Tool works for single object per image only. Please use images with single object for accurate results. You can verify labels by checking png images. If the background is correctly removed from image then it is labelled correctly.
+
 YOLO Labeler is a tool to remove images background and label object in YOLO format.
 
 ### Examples
-<p style="display: flex;align-items: center;justify-content: center; border-style: groove;">
+<p style="display: flex;align-items: center;justify-content: center;">
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="400" />
   <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="400" />
   <div class="textcontent">
@@ -74,32 +75,27 @@ python3 test.py --input_path /path/to/input/image or image_folder --output_image
 
 To not resize images provide --resize flag to 1
 ```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1
+python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --size 1
 ```
 
 To save output png images provide --png_path
 ```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png
+python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --size 1 --png_path /path/to/output/png
 ```
 
 To resize images of custom width x height provide --width and --height. Default is 416x416
 ```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416
-```
-
-To resize images of custom width x height provide --width and --height. Default is 416x416
-```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416
+python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --png_path /path/to/output/png --width 416 --height 416
 ```
 
 To change background behind object provide --background_image
 ```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416 --background_image /path/to/background/image
+python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --png_path /path/to/output/png --width 1000 --height 1000 --background_image /path/to/background/image
 ```
 
 To save changed background images provide --background_out
 ```bash
-python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416 --background_image /path/to/background/image --background_out /path/to/output/changed/background/images
+python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --png_path /path/to/output/png --width 416 --height 416 --background_image /path/to/background/image --background_out /path/to/output/changed/background/images
 ```
 
 ### References
@@ -110,4 +106,4 @@ python3 test.py --input_path /path/to/input/image or image_folder --output_image
 
 Copyright (c) 2020-present [Abhi Panchal](https://github.com/abpanchal95)
 
-Licensed under [MIT License](./LICENSE.txt)
+Licensed under [MIT License](./LICENSE)

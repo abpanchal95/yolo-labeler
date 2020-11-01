@@ -25,15 +25,15 @@ def get_arg():
 	_, all_arguments = parser.parse_known_args()
 	script_args = all_arguments[0:]
     
-	parser.add_argument("-ipath","--input_path", type=str, "input path of image or image folder")
-	parser.add_argument("-opath","--output_image_path", type=str, "path to yolo output images")
-	parser.add_argument("-tpath","--output_text_path", type=str, "path to yolo output text files")
-	parser.add_argument("-ylabel","--yolo_label", type=int, default=0, "yolo string class number")
-	parser.add_argument("-resize","--resize", type=bool, default=False, help="reverse resize flag (1 for no resizeing)")	
+	parser.add_argument("-ipath","--input_path", type=str, help="input path of image or image folder")
+	parser.add_argument("-opath","--output_image_path", type=str, help="path to yolo output images")
+	parser.add_argument("-tpath","--output_text_path", type=str, help="path to yolo output text files")
+	parser.add_argument("-ylabel","--yolo_label", type=int, default=0, help="yolo string class number")
+	parser.add_argument("-size","--size", type=bool, default=False, help="reverse resize flag (1 for no resizeing)")	
 	parser.add_argument("-width","--width", type=int, default=416, help="when size != 1, image width for resize")
 	parser.add_argument("-height","--height", type=int, default=416, help="when size != 1, image height for resize")
-	parser.add_argument("-png_path","--png_path", type=str, "path to output png images")
-	parser.add_argument("-bg_img","--background_image", type=str, "path to input background image")
+	parser.add_argument("-png_path","--png_path", type=str, help="path to output png images")
+	parser.add_argument("-bg_img","--background_image", type=str, help="path to input background image")
 	parser.add_argument("-bg_out","--background_out", type=str, help="path to output images with added background")
 	parser.add_argument("-ae","--alpha_erode", type=int, help="possible to achieve better results by turning on alpha matting(default 10)")		
     
@@ -225,7 +225,9 @@ def get_right(img):
 def main(args, model, image_path):	
 	print(f"Processing {image_path}")
 	img = Image.open(image_path).convert('RGB')
-	if not args.resize:
+	if args.size and (args.width or args.height):
+		raise ValueError("Please provide either size flag 1 or width and height")
+	if not args.size:
 		img = img.resize((args.width, args.height), resample=Image.LANCZOS)
 	mask = predict(model, np.array(img)).convert("L")
 
@@ -254,15 +256,23 @@ def main(args, model, image_path):
 		back_img = Image.open(args.background_image)
 		back_img = back_img.resize(cutout.size, resample=Image.LANCZOS)
 		back_img.paste(cutout, (0, 0), cutout)
+		if not os.path.isdir(args.background_out):
+			os.makedirs(args.background_out)
 		back_img.save(os.path.join(args.background_out, f'{os.path.basename(image_path)}'.split('.')[0] + '_.png'), 'PNG')
 
 	#saving output
 	if args.output_text_path:
+		if not os.path.isdir(args.output_text_path):
+			os.makedirs(args.output_text_path)
 		with open(os.path.join(args.output_text_path, f'{os.path.basename(image_path)}'.split('.')[0] + '_.txt'), 'w') as f:
 			f.write(yolo_string)
 	if args.output_image_path:
+		if not os.path.isdir(args.output_image_path):
+			os.makedirs(args.output_image_path)
 		img.save(os.path.join(args.output_image_path, f'{os.path.basename(image_path)}'.split('.')[0] + '_.jpg'), 'JPEG')
 	if args.png_path:
+		if not os.path.isdir(args.png_path):
+			os.makedirs(args.png_path)
 		cutout.save(os.path.join(args.png_path, f'{os.path.basename(image_path)}'.split('.')[0] + '_.png'), 'PNG')
 		
 	return yolo_string
