@@ -10,16 +10,28 @@ Note: This tool is using U-2-Net model for background removal. So it is preferre
 YOLO Labeler is a tool to remove images background and label object in YOLO format.
 
 <p style="display: flex;align-items: center;justify-content: center;">
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2.jpg" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2_.png" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3.jpg" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3_.png" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4.jpg" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4_.png" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5.jpg" width="100" />
-  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5_.png" width="100" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1.jpg" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/1_.png" width="250" />
+</p>
+
+<p style="display: flex;align-items: center;justify-content: center;"> 
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2.jpg" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/2_.png" width="250" />
+</p>
+
+<p style="display: flex;align-items: center;justify-content: center;">  
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3.jpg" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/3_.png" width="250" />
+</p>
+
+<p style="display: flex;align-items: center;justify-content: center;">  
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4.jpg" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/4_.png" width="250" />
+</p>
+
+<p style="display: flex;align-items: center;justify-content: center;">  
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5.jpg" width="250" />
+  <img src="https://github.com/abpanchal95/yolo-labeler/blob/master/examples/5_.png" width="250" />
 </p>
 
 ### Installation
