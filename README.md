@@ -95,10 +95,12 @@ python3 test.py --input_path /path/to/input/image or image_folder --output_image
 To change background behind object provide --background_image
 ```bash
 python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416 --background_image /path/to/background/image
+```
 
 To save changed background images provide --background_out
 ```bash
 python3 test.py --input_path /path/to/input/image or image_folder --output_image_path /path/to/output/images --output_text_path /path/to/output/text --yolo_label class_num --resize 1 --png_path /path/to/output/png --width 416 --height 416 --background_image /path/to/background/image --background_out /path/to/output/changed/background/images
+```
 
 ### References
 
