@@ -10,7 +10,7 @@ with open("requirements.txt") as f:
 
 setuptools.setup(
     name="yolo_labeler",
-    version="0.0.1",
+    version="0.0.3",
     author="Abhi Panchal",
     author_email="abpanchal95@gmail.com",
     description="Remove image background and label object in yolo format",
