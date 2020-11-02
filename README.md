@@ -1,5 +1,8 @@
 # Automatic YOLO Labeler
 
+[![Downloads](https://pepy.tech/badge/rembg)](https://pepy.tech/project/rembg)
+[![Downloads](https://pepy.tech/badge/rembg/month)](https://pepy.tech/project/rembg/month)
+[![Downloads](https://pepy.tech/badge/rembg/week)](https://pepy.tech/project/rembg/week)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://img.shields.io/badge/License-MIT-blue.svg)
 
 #### Note: Tool works for single object per image only. Please use images with single object for accurate results. You can verify labels by checking png images. If the background is correctly removed from image then it is labelled correctly.
